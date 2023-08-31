@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image } from "react-native";
-import styles from "./styles";
+import styles from"./styles";
 
 const Gif2 = props => {
   return (
