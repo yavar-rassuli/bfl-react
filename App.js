@@ -23,7 +23,7 @@ export default function App() {
   return (
     <NavigationContainer linking={linking}>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+<Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Tables" component={TablesScreen} />
         <Stack.Screen name="Info" component={InfoScreen} />
         <Stack.Screen name="League" component={LeagueScreen} />
