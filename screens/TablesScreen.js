@@ -1,9 +1,14 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Linking } from 'react-native';
+import { LEAGUES } from '../data/leagues';
 
 export default function TablesScreen() {
   return (
     <View style={styles.screen}>
-      <Text>TablesScreen</Text>
+      {LEAGUES.map((league) => (
+        <Pressable key={league.id} onPress={() => Linking.openURL(league.tableUrl)}>
+          <Text>{league.name} table ↗</Text>
+        </Pressable>
+      ))}
     </View>
   );
 }

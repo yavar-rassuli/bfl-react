@@ -1,9 +1,15 @@
+import { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { LEAGUES } from '../data/leagues';
 
-export default function LeagueScreen({ route }) {
+export default function LeagueScreen({ route, navigation }) {
   const { id } = route.params;
   const league = LEAGUES.find((l) => l.id === id);
+
+  useEffect(() => {
+    navigation.setOptions({ title: league.name });
+  }, [league]);
+
 
   return (
     <View style={styles.screen}>
