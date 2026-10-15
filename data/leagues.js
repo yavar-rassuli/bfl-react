@@ -28,7 +28,7 @@ export const LEAGUES = [
     country: 'England',
     founded: 1992,
     teams: 20,
-    tableUrl: 'https://www.premierleague.com/tables',
+    tableUrl: 'https://www.premierleague.com/en/tables/premier-league',
     description:
       "England's top football league and the most watched league in the world. The season runs from August to May, and the bottom three teams are relegated.",
   },
