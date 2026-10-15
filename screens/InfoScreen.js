@@ -1,21 +1,22 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { LEAGUES } from '../data/leagues';
+import LeagueCard from '../components/LeagueCard';
 
 export default function InfoScreen({ navigation }) {
   return (
-    <View style={styles.screen}>
+    <View style={styles.list}>
       {LEAGUES.map((league) => (
-        <Pressable
+        <LeagueCard
           key={league.id}
+          league={league}
+          action="→"
           onPress={() => navigation.navigate('League', { id: league.id })}
-        >
-          <Text>{league.name}</Text>
-        </Pressable>
+        />
       ))}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  list: { padding: 24, width: '100%', maxWidth: 640, alignSelf: 'center' },
 });
